@@ -2,33 +2,84 @@
 <html lang= "en">
   <head>
     <link rel="stylesheet" href="style.css" />
+      <style>
+        .photo {
+          position: relative;
+          z-index: 1;
+          transform: scale(1);
+          transition: transform 0.3s;
+        }
+      
+        .photo:hover{
+          display:inline-block;
+          transform: scale(1.5); 
+          z-index: 2;
+        }
+      </style>
     <title>Austin's Website</title>
   </head>
   <body>
    
    <table>
-      <th><a href="">About Me</a></th>
-      <th><a href="#top-threes">Top Threes</a></th>
-      <th><a href="">Pictures</a></th>
-      <th><a href="">Projects</a></th>
-      <th><a href="">Contact Info</a></th>
+    <thead>
+      <th><a href=""><button>About Me</button></a></th>
+     
+      <th>
+        <div class="dropdown">
+          <button class="dropbtn">Top Threes</button>
+       
+        <div class="dropdown-content">
+          <a href="#ski-resorts">Ski resorts</a>
+          <a href="#bands">Bands</a>
+          <a href="#movies">Movies</a>
+        </div>
+        </div> 
+      </th>
+     
+      <th>
+         <div class="dropdown">
+        <a href="#projects">
+          <button class="dropbtn">Projects</button></a>
+      <div class="dropdown-content">
+        <a href="#projects">Projects</a>
+      </div>
+      </div>
+      </th>
+      <th>
+        <div class="dropdown">
+        <a href="#pictures">
+          <button class="dropbtn">Pictures</button></a>
+          <div class="dropdown-content">
+          <a href="#pictures">Pictures</a>
+          </div>
+        </div>
+      </th>
+        <th><a href="#contact-info"><button>Contact Info</button></a></th>
+      </thead>
     </table>
-
+    
+    
+    
     <h1>Austin Ohlfs</h1>
     
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1193381977388418%26set%3Da.1028466780546606&show_text=true&width=500" >Austin</iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D1193381977388418%26set%3Da.1028466780546606&show_text=true&width=500">Austin</iframe>
 
     <h2>About Me</h2>
-    
-    <p>Hi I'm Austin Ohlfs!</p>
+   
+    <p>Hi, I'm Austin Ohlfs!</p>
+   
       
-    <p>I am from the great state of Colorado! For the past eight years I have been working as a ski and bike tech in Vail Colorado. I love spending time outside in the mountains hinking, camping, golfing, and floating the rivers in the summertime, and you especially riding my snowboard in the winter! When im not spending time in the mountains I enjoy going to concerts and sports events. I like to see musician who is good live, and I root for all my Denver sports teams win or lose! I am excited about this new chapter in my life learning sofewar development. I can't wait to be able to implement the skills to create programs and solve real problems!</p>
+    <p>I am from the great state of Colorado! For the past eight years I have been working as a ski and bike tech in Vail Colorado. I love spending time outside in the mountains hinking, camping, golfing floating the rivers in the summertime, and especially riding my snowboard in the winter! When im not spending time in the mountains I enjoy going to concerts and sports events. I like to see any musician who is good live, and I root for all my Denver sports teams win or lose! I am excited about this new chapter in my life learning software development. I can't wait to be able to implement the skills I learn to create programs and solve real problems!</p>
+   
     <div id="top-threes">  
-    <h2>Top Threes</h2>
-    <div id="ski-resorts"></div>  
-    <h3>Ski resorts</h3>
+    
+      <h2>Top Threes</h2>
+    
+      <div id="ski-resorts">  
+    
      
     <ol>
+      <h3>Ski resorts</h3>
         <li>Copper Mountain
           <img src="https://www.exploringtherockies.com/wp-content/uploads/2022/12/exploring-the-rockies-guide-to-copper-mountain-1500x627.png" alt="copper-mountain" class="hidden-img">
         </li>
@@ -42,22 +93,27 @@
       
       </ol>
      </div>
-     <div id="bands"></div>
-      <h3>Bands</h3>
-      
+     <div id="bands">
       <ol>
-        
-        <li>Jack Johnson</li>
-        <li>John Prine</li>
-        <li>Jerry Garcia Band</li>
-      
+        <h3>Bands</h3>
+        <div class="container">
+          <li>Jack Johnson</li>
+          <iframe id="hover-play"style="border-radius:12px" src="https://open.spotify.com/embed/track/4VywXu6umkIQ2OS0m1I79y?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-med
+          ia; fullscreen; picture-in-picture" loading="lazy" class="bananna-pancakes-preview"></iframe>
+        </div>
+        <div class="container">
+          <li class="hover-play">John Prine</li>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1HC7y9PcVOBSUHl053nKj6?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="container">
+          <li class="hover-play">Jerry Garcia Band</li>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4PyQwPpD9zfLP5F30zFvYs?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </ol>
-    </div>
-    <div id="movies"></div>
-      <h3>Movies</h3>
-      
+      </div>
+
+    <div id="movies">
       <ol>
-       
+       <h3>Movies</h3>
         <li>God Father pt 2
           <iframe width="1091" height="604" src="https://www.youtube.com/embed/OA1ij0alE0w" title="The Godfather Part II Trailer (HD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="hidden-video"></iframe>
         </li>
@@ -67,11 +123,105 @@
         <li>The Big Lebowski
           <iframe width="10" height="10" src="https://www.youtube.com/embed/ngV0RBhGZmE" title="The Big Lebowski Trailer #1 (1998)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="hidden-video"></iframe>
         </li>
+        </ol>
+          </div>
+      </div>
 
-      </ol>
+      <div id="projects">
+      <h2>Projects</h2>
+      <img src="https://t3.ftcdn.net/jpg/00/92/66/20/240_F_92662026_9fiMh5jgCBIo9il3sQgMQCXdZ0W5afBa.jpg"  class="coming-soon"/>
+      </div>
+      
+      <div id="pictures">
+      <h2>Pictures</h2>
+      </div>
+      <div id="golf-album">
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/20210706_055923.jpg" alt="American flag on hole 18 at Cordillera golf course">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/20220724_055305.jpg" alt="Sunrise at Cordillera golf course1">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/20210729_055116.jpg" alt="Sunrise at Cordillera golf course2">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/20210921_110553.jpg" alt="5th green at Cordillera golf course">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/20220801_182725.jpg" alt="Red feather lakes">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/1000000464.jpg" alt="In the river with my dog">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/1000000506.jpg" alt="Lake Nottingham in the fall">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/FB_IMG_1692636309949.jpg" alt="On the shores of lake Jackson">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/1000000167.jpg" alt="Nottingham lake">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/IMG_3539.jpg" alt="Happy customers at the ski shop">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/VideoCapture_20230910-142233.jpg" alt="Snowboard img1">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/VideoCapture_20230910-142330.jpg" alt="Snowboard img2">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/Screenshot_20230911_081644_Photos.jpg" alt="Snowboard img3">
+        </div>
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/VideoCapture_20230910-142339.jpg" alt="Snowboard img 4">
+        </div> 
+        <div class="photo">
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/IMG_20221013_181250_262.jpg" alt="Slot canyon in Utah">
+        <div class="photo">
+          <img src="/Users/austin.ohlfs/Downloads/IMG_4006.jpg" alt="My brother and I on the mountain">
+        </div>
+          <img src="/Users/austin.ohlfs/Downloads/20220630_192053.jpg" alt="Sailboats at Dillon amphitheater">
+        </div>
+        </div>
+        </div>
+      </div>
+
+      <div id="contact-info">
+        <h2>Contact Info</h2>
+        <form id="contactForm">
+        
+           <div id="send-email">
+            <form action="https://formsubmit.co/ohlfsam96@gmail.com" method="post" enctype="text/plain">
+             <div id="name">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required>
+            </div>
+
+            <div id="email">
+               <label for="email">Email:</label>
+              <input type="email" id="email"required>
+            </div>
+            <div id="subject">
+              <label for="subject">Subject:</label>
+              <input type="subject" id="subject"required>
+             </div>
+             <div id="message">
+               <label for="message">Message:</label>
+               <textarea id="message" required></textarea>
+             </div>
+      
+            <button type="submit">Send Email</button>
+
+             </form>
+        </form>
+      </div>
     </div>
     </div>
-    
+    <script scr="script.js"></script>
     </table>
   </body>
 </html>
